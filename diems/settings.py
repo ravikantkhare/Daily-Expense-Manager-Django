@@ -42,8 +42,23 @@ DEBUG = os.environ.get('DEBUG', 'False') == 'True'
 ALLOWED_HOSTS = ['*']  # ya ['Daily-Expense-Manager-Django.onrender.com'] for stricter security
 
 
-STATIC_URL = 'static/'
+# STATIC_URL = '/static/'
+#STATICFILES_DIRS = [BASE_DIR / 'static']
+
+
+
+# static files url
+STATIC_URL = '/static/'
+
+# collectstatic destination
 STATIC_ROOT = BASE_DIR / 'staticfiles'
+
+# extra locations (optional, agar static folder alag jagah hai)
+STATICFILES_DIRS = [
+    BASE_DIR / 'static',  # ye tumhare app ke static folder ke liye
+]
+
+
 
 
 
